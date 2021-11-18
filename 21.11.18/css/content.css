@@ -1,0 +1,10 @@
+.header { height: 100px; background: red; }
+
+.mixin_media { width: 100px; height: 100px; background-color: pink; }
+
+@media (min-width: 1025px) { .mixin_media { background-color: green; } }
+
+@media (min-width: 768px) { .mixin_media { background-color: blue; } }
+
+.footer { height: 200px; background: green; }
+/*# sourceMappingURL=content.css.map */

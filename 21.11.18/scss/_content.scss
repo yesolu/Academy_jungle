@@ -1,0 +1,65 @@
+// @mixin center($width,$height) {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     width: $width;
+//     margin-left: - $width / 2;
+//     height: $height;
+//     margin-top: - $height / 2;
+// }
+
+// .ex_box_1{
+//     @include center(300px, 300px);
+//     background: pink;
+// }
+// .ex_box_2{
+//     @include center(400px, 400px);
+//     background: rgb(164, 41, 67);
+// }
+
+// @mixin mq($point) {
+//     @if $point == pc {
+//         @media (min-width: 1025px) { @content; }
+//     }
+//     @else if $point == tablet {
+//         @media (min-width: 768px) { @content; }
+//     }
+//     @else if $point == mobile  {
+//         @media (max-width: 767px)  { @content; }
+//     }
+    
+// }
+
+// .mixin_media {
+//     width: 100px;
+//     height: 100px;
+//     background-color: pink;
+//     @include mq("pc") {
+//         background-color: green;
+//     }
+//     @include mq("tablet") {
+//         background-color: blue;
+//     }
+// }
+
+@mixin ellipsis ($lines: 1) { // 인자 값의 기본 값은 1
+    @if ($lines == 1) {
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+    } @else {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: $lines;
+        -webkit-box-orient: vertical;
+    }
+}
+.latte {
+    @include ellipsis();
+    // @include ellipsis(1);
+    // @include ellipsis; // 괄호는 생략 가능
+}
+.vanilla {
+    @include ellipsis(3);
+}
