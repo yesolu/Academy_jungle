@@ -5,8 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .tableArea{
+            display: table;
+            table-layout:fixed;
+            
+        }
+        .col{display: table-cell;}
+    </style>
 </head>
 <body>
-    <h1>Hello</h1>
+    <form action="login.html" method="post">
+        <!-- method post=> 아이디 입력창  / 공개X  get=> 검색창/공개-->
+        <label for="_id">아이디입력</label>
+        <input type="text" id="_id" placeholder="아이디를 입력해주세요">
+        <label for="_pw">비밀번호입력</label>
+        <input type="password" id="_pw" placeholder="비밀번호를 입력해주세요">
+        <input type="checkbox" id="_chk">
+        <label for="_chk">로그인 유지</label>
+
+    </form>
+
+    <div class="tableArea">
+        <div class="col">123</div>
+        <div class="col">123</div>
+    </div>
 </body>
 </html>
